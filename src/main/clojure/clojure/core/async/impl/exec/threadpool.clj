@@ -28,4 +28,6 @@
                       (conc/counted-thread-factory "async-dispatch-%d" true))]
     (reify impl/Executor
       (impl/exec [this r]
-        (.execute executor-svc ^Runnable r)))))
+        (.execute executor-svc ^Runnable r))
+      (impl/impl [this]
+        executor-svc))))

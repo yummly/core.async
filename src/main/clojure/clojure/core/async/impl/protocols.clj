@@ -41,7 +41,8 @@
      (add!* b itm)))
 
 (defprotocol Executor
-  (exec [e runnable] "execute runnable asynchronously"))
+  (exec [e runnable] "execute runnable asynchronously")
+  (impl [e] "return the JVM objects "))
 
 ;; Defines a buffer that will never block (return true to full?)
 (defprotocol UnblockingBuffer)
